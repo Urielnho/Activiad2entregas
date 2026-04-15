@@ -50,6 +50,14 @@
             El flujo conserva lo esencial, pero con una presentacion mas elegante,
             mejor balance visual y una sensacion de compra mas exclusiva.
           </p>
+          <div class="challenge-card">
+            <p class="challenge-card__label">Reto actividad 2</p>
+            <p>
+              Agrega un <strong>Cuarto de Libra Combo</strong> en McDonald's y una
+              <strong>Galleta doble chocolate</strong> en Subway sin perder el carrito,
+              luego termina el pago con tarjeta.
+            </p>
+          </div>
         </div>
         <div class="hero-card">
           <p class="hero-card__label">Reserva actual</p>
@@ -80,9 +88,9 @@
             <label class="sr-only" for="filtro-cat">Categoría</label>
             <select id="filtro-cat" aria-label="Filtrar por tipo de comida">
               <option value="todas">Todas las categorías</option>
-              <option value="pizza">Pizza</option>
-              <option value="asiatica">Asiática</option>
               <option value="hamburguesas">Hamburguesas</option>
+              <option value="pollo">Pollo</option>
+              <option value="sandwiches">Sandwiches</option>
             </select>
           </div>
         </div>
@@ -132,13 +140,16 @@
               </p>
               <p>
                 Envío
-                <strong id="envio-delivery">2,50 €</strong>
+                <strong id="envio-delivery">0,00 €</strong>
               </p>
               <p class="total-line">
                 Total
                 <strong id="total-delivery">0,00 €</strong>
               </p>
             </div>
+            <p id="checkout-branch-summary" class="muted summary-note">
+              El total final suma un envio por cada sucursal activa en tu carrito.
+            </p>
           </section>
 
           <section class="checkout-card">
@@ -159,12 +170,25 @@
               <label>
                 Método de pago
                 <select id="input-pago" name="pago" required>
-                  <option value="">Selecciona una opción</option>
                   <option value="tarjeta">Tarjeta</option>
-                  <option value="efectivo">Efectivo</option>
-                  <option value="transferencia">Transferencia</option>
                 </select>
               </label>
+              <div class="card-fields">
+                <label>
+                  Numero de tarjeta
+                  <input type="text" id="input-tarjeta" name="tarjeta" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19" required />
+                </label>
+                <div class="card-fields__grid">
+                  <label>
+                    Vencimiento
+                    <input type="text" id="input-vencimiento" name="vencimiento" placeholder="MM/AA" maxlength="5" required />
+                  </label>
+                  <label>
+                    CVV
+                    <input type="text" id="input-cvv" name="cvv" inputmode="numeric" placeholder="123" maxlength="4" required />
+                  </label>
+                </div>
+              </div>
               <label>
                 Indicaciones adicionales
                 <textarea id="input-notas" name="notas" rows="4" placeholder="Ej. tocar el timbre, sin cebolla"></textarea>
