@@ -54,7 +54,7 @@
         precio: 11.9,
         img: './assets/dish-m1.svg',
         descripcion: 'Hamburguesa con queso, papas medianas y refresco para dos personas.',
-        etiqueta: 'Pedido del reto'
+        etiqueta: 'Mas pedido'
       },
       {
         id: 'm2',
@@ -108,7 +108,7 @@
         precio: 2.4,
         img: './assets/dish-m7.svg',
         descripcion: 'Galleta recien horneada, suave al centro y perfecta para cerrar el pedido.',
-        etiqueta: 'Pedido del reto'
+        etiqueta: 'Postre favorito'
       },
       {
         id: 'm8',
